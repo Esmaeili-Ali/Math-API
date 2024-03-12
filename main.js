@@ -4,6 +4,8 @@ import "dotenv/config";
 import {
   addNumberArrayController,
   addTwoNumberController,
+  divisionNumberArrayController,
+  divisionTwoNumberController,
   minusNumberArrayController,
   minusTwoNumberController,
   multiplyNumberArrayController,
@@ -26,6 +28,8 @@ app.post("/multiply", multiplyNumberArrayController);
 app.get("/minus", minusTwoNumberController);
 app.post("/minus", minusNumberArrayController);
 
+app.get("/div", divisionTwoNumberController);
+app.post("/div", divisionNumberArrayController);
 app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${process.env.PORT}`);
 });
